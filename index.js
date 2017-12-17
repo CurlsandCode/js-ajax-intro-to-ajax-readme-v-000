@@ -1,5 +1,11 @@
 function showRepositories(event, data){
   console.log(this.responseText)
+  let repoList = "<ul>"
+  for(var i=0, i < this.responseText.lenght; i++) {
+    reproList += "<li>" + this.responseText[i]["name"] + "</li>"
+  }
+  reproList += "</ul>"
+  document.getElementById("repositories").innerHTML = repoList
 }
 
 
